@@ -1,8 +1,8 @@
 import React from 'react';
-
+// import PropTypes from 'prop-types'
 import  Photo from './Photo.js';
 
-function Photowall(props) {
+function PhotoWall(props) {
     return (
     <div className = "photoGrid">
       {props.posts.map((post,index) => <Photo key = {index} post = {post} onRemovePhoto = {props.onRemovePhoto} />)}
@@ -10,5 +10,10 @@ function Photowall(props) {
   );
 }
 
+// PhotoWall.PropTypes = {
+//     posts:PropTypes.array.isRequired,
+//     onRemovePhoto: PropTypes.func.isRequired
+// }
 
-export default Photowall
+
+export default PhotoWall
