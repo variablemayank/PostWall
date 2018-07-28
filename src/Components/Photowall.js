@@ -7,7 +7,7 @@ function PhotoWall(props) {
     return (
       <div>
 
-          <Link className = "addIcon" to = "/AddPhoto"> +</Link> 
+          <Link className = "addIcon" to = "/AddPhoto"> +</Link>
           <div className = "photoGrid">
           {props.posts
             .sort(function(x,y){
@@ -19,9 +19,5 @@ function PhotoWall(props) {
   );
 }
 
-PhotoWall.propTypes = {
-    posts: PropTypes.array.isRequired,
-
-}
 
 export default PhotoWall
