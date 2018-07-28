@@ -6,9 +6,12 @@ import './styles/stylesheet.css'
 import {Provider} from 'react-redux'
 import { createStore } from 'redux';
 import rootReducer from './redux/reducer';
+import thunk from 'redux-thunk'
+import database from './config'
+import {applyMiddleware } from 'redux'
 
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer,applyMiddleware(thunk))
 
 
 ReactDOM.render(<Provider store={store}>
